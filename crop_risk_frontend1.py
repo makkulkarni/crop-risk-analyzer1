@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import streamlit as st
 import pandas as pd
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
 from crop_risk_backend1 import simulate_cluster_risks, find_top_combinations
 
 st.set_page_config(page_title="Crop Risk Analyzer", layout="wide")
@@ -92,4 +95,5 @@ else:
 if st.sidebar.button("🔁 Clear All Data"):
     for key in list(st.session_state.keys()):
         del st.session_state[key]
+
     st.rerun()
