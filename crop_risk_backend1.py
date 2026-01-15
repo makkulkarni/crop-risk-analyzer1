@@ -196,12 +196,3 @@ def find_top_combinations(cluster_summary, top_n=5):
 
     return pd.DataFrame(combos).sort_values("cv").head(top_n)
 
-yield_file=r"D:/testapp/python/crop_insurance_portfolio/yield.csv"
-thresh_file=r"D:/testapp/python/crop_insurance_portfolio/Thresholds1.csv"
-yield_df = pd.read_csv(yield_file)
-thresh_df = pd.read_csv(thresh_file)
-sims=1000
-indemnity=10/100
-district_summary, cluster_summary = simulate_cluster_risks(
-    yield_df, thresh_df, n_sims=sims, indemnity=indemnity
-)
