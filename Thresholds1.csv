@@ -1,0 +1,10 @@
+State,Cluster,District,Crop,Threshold,sum_insured_per_ha,cap_default_pct
+MH,Cluster1,Pune,Paddy,4000,50000,
+MH,Cluster2,Satara,Paddy,4100,50000,
+MH,Cluster2,Sangli,Paddy,3900,60000,
+MH,Cluster1,Pune,Soybean,3700,40000,10
+MH,Cluster2,Satara,Soybean,4000,50000,10
+MH,Cluster2,Sangli,Soybean,3500,40000,10
+MH,Cluster3,Ratnagiri,Paddy,4150,40000,
+MH,Cluster3,Kolhapur,Paddy,4000,60000,
+MH,Cluster3,Kolhapur,Soybean,3800,55000,15
