@@ -196,3 +196,8 @@ def find_top_combinations(cluster_summary, top_n=5):
 
     return pd.DataFrame(combos).sort_values("cv").head(top_n)
 
+if __name__ == "__main__":
+    # Move all your "active" code down here!
+    # This part will ONLY run on your computer, not on Streamlit
+    yield_file = "your_local_file.csv"
+    print(yield_file)
