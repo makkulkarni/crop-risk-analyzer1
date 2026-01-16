@@ -10,6 +10,15 @@ from crop_risk_backend1 import simulate_cluster_risks, find_top_combinations
 st.set_page_config(page_title="Crop Risk Analyzer", layout="wide")
 
 st.title("🌾 Crop Insurance Portfolio Risk Analyzer")
+sample_url_yield = "https://raw.githubusercontent.com/makkulkarni/crop-risk-analyzer1/main/yield.csv"
+sample_url_threshold = "https://raw.githubusercontent.com/makkulkarni/crop-risk-analyzer1/main/Thresholds1.csv"
+st.subheader("Don't have data?")
+st.write("Download these sample files to test the app:")
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown(f'[📥 Download Sample yield CSV]({sample_url_yield})')
+with col2:
+    st.markdown(f'[📥 Download Sample threshold CSV]({sample_url_threshold})')
 
 # --- 1. File Upload Section ---
 st.sidebar.header("Data Upload")
@@ -98,5 +107,6 @@ if st.sidebar.button("🔁 Clear All Data"):
         del st.session_state[key]
 
     st.rerun()
+
 
 
